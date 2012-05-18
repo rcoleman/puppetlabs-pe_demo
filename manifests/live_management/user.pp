@@ -1,7 +1,7 @@
 define pe_demo::live_management::user {
 
   # Demo: User variance
-  ## Create users with different shells for use in live management.
+  ## Create users with different shells and homes for use in live management.
 
   $random_shell_choice = fqdn_rand(4)
 
@@ -12,16 +12,17 @@ define pe_demo::live_management::user {
     '3' => '/sbin/nologin',
   }
 
+  $random_home_choice = fqdn_rand(3)
+
+  $home = $random_home_choice ? {
+    '0' => "/home/users/${name}",
+    '1' => "/opt/homes/${name}",
+    '2' => "/usr/local/home/${name}",
+  }
   user { $name:
     ensure     => present,
-    home       => "/home/${name}",
+    home       => $home ,
     shell      => $shell,
-  }
-
-  if ! defined ( Group[$name] ) {
-    group { $name:
-      ensure => $ensure,
-    }
   }
 
 }

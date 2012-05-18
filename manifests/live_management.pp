@@ -1,11 +1,11 @@
 class pe_demo::live_management {
 
     # Create random users
-    pe_demo::live_management::user { [ 'Arnoldo',
-                                       'Giselle',
-                                       'Javier',
-                                       'Russel',
-                                       'Milford'
+    pe_demo::live_management::user { [ 'Elmo',
+                                       'Statler',
+                                       'Beaker',
+                                       'Kermit',
+                                       'Gonzo'
                                      ]:
     }
 

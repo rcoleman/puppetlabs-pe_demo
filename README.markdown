@@ -6,5 +6,5 @@ The pe_demo module provides several classes to aid in the creation of a Puppet E
 Usage
 -----
 
-Declare the pe_demo::live_management class across several nodes to receive varied user and host resources to clone around. 
+Declare the pe_demo class across several nodes to receive varied user and host resources to clone around. 
 Be sure to un-declare this class before attempting to clone any of them.

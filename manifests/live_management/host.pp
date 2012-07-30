@@ -1,7 +1,7 @@
+# Demo: Host variance
+## Creates a host entry to clone around.
+## The IP addresses are not real.
 class pe_demo::live_management::host {
-
-  # Demo: Host variance
-  ## Create a host entry to clone around.
 
   $random_host_choice = fqdn_rand(5)
 

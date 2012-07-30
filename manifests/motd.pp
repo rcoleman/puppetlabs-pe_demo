@@ -1,3 +1,6 @@
+# Demo: MOTD
+# This class creates a MOTD in /etc/motd that changes every Puppet run based
+# on varying memoryfree and uptime facts.
 class pe_demo::motd {
 
   # Demo: Changing Resources
